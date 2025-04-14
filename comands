@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# Basic shell script commands and operators with their purpose:
+
+# 1. Echo: Print text or variables to the terminal
+echo "Hello, World!"
+
+# 2. Variables: Assign and use variables
+name="John"
+echo "My name is $name"
+
+# 3. Read: Take input from the user
+read -p "Enter your age: " age
+echo "You are $age years old."
+
+# 4. If-Else: Conditional statements with comparison operators
+# -eq: Equal to
+# -ne: Not equal to
+# -gt: Greater than
+# -lt: Less than
+# -ge: Greater than or equal to
+# -le: Less than or equal to
+if [ $age -ge 18 ]; then
+    echo "You are an adult."
+else
+    echo "You are a minor."
+fi
+
+# 5. Loops: For loop
+for i in {1..5}; do
+    echo "Number: $i"
+done
+
+# 6. While loop
+counter=1
+while [ $counter -le 5 ]; do
+    echo "Counter: $counter"
+    ((counter++))
+done
+
+# 7. Functions: Define and call functions
+greet() {
+    echo "Hello, $1!"
+}
+greet "Alice"
+
+# 8. File operations: Create, read, and write files
+# > : Redirect output to a file (overwrite)
+# >> : Append output to a file
+echo "This is a test file." > testfile.txt
+cat testfile.txt
+
+# 9. Command substitution: Use command output in variables
+current_date=$(date)
+echo "Current date and time: $current_date"
+
+# 10. Logical operators:
+# && : Logical AND
+# || : Logical OR
+if [ $age -ge 18 ] && [ $age -lt 60 ]; then
+    echo "You are of working age."
+else
+    echo "You are either too young or retired."
+fi
+
+# 11. Exit: Exit the script
+exit 0
