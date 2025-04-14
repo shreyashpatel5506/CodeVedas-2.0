@@ -37,6 +37,9 @@ while [ $counter -le 5 ]; do
     echo "Counter: $counter"
     ((counter++))
 done
+#add expression example using let
+let "counter=counter+1"
+echo "Counter after let: $counter"
 
 # 7. Functions: Define and call functions
 greet() {
