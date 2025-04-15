@@ -6,7 +6,7 @@ i=2
 
 while [ $count -lt $num ]; do
     is_prime=1
-    for ((j=2; j<=i; j++)); do
+    for ((j=2; j<=i/2; j++)); do
         if [ $((i % j)) -eq 0 ]; then
             is_prime=0
             break
