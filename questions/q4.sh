@@ -6,7 +6,7 @@ read -p "Enter a number: " num
 
 for ((i=0; i<num; i++))
     do
-        echo $b
+        echo $a
         fn=$((a + b))
         a=$b
         b=$fn
